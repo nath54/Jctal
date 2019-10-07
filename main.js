@@ -11,6 +11,9 @@ var vitz=10.;
 //var zoom = 200; // pour une distance de 1 sur le plan, on a 100 pixel sur l'image
 var iteration_max = 255;
 
+var zoom_x=1;
+var zoom_y=1;
+
 function calc(){
 	ctx.fillStyle="rgb(255,255,255)";
     ctx.fillRect(0,0,tex,tey);
@@ -19,8 +22,8 @@ function calc(){
     var y1=parseFloat(document.getElementById("y1").value);
     var y2=parseFloat(document.getElementById("y2").value);
     // on calcule la taille de l'image :
-    var zoom_x = image_x/(x2 - x1)
-    var zoom_y = image_y/(y2 - y1)
+    zoom_x = image_x/(x2 - x1)
+    zoom_y = image_y/(y2 - y1)
     alert( x1+" "+x2+" "+y1+" "+y2 );
     for(x = 0 ; x < image_x ; x++){
         for(y = 0 ; y < image_y ; y++){
@@ -52,6 +55,20 @@ function calc(){
         }
     }
 }
+
+function getCursorPosition(canvas, event) {
+    const rect = canvas.getBoundingClientRect()
+    const x = event.clientX - rect.left
+    const y = event.clientY - rect.top
+    alert("Vous avez cliqué en coordonnée x : "+x1+x/zoom_x+" et y : "+y1+y/zoom_y);
+}
+
+
+canvas.addEventListener('mousedown', function(e) {
+    getCursorPosition(canvas, e)
+})
+
+
 
 calc();
 
