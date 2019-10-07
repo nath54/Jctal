@@ -3,10 +3,13 @@
 This is the webpage for the project Jctal?
 Jctal is a javascript app that propose to you to explore fractals.
 
-### The link
+### Use It
 
-This is the link of the project : [The link"](https://nath54.github.io/Jactal/main.html)
+This is the link of the project : [The link](https://nath54.github.io/Jactal/main.html)
 
+### How to use it
+
+It is not very complicated, you just have to enter the coordinates of the picture you want to look, or click on the image to the place you want to see ( no functionable yet ).
 
 ### Support or Contact
 
