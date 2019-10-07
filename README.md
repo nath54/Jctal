@@ -5,7 +5,7 @@ Jctal is a javascript app that propose to you to explore fractals.
 
 ### The link
 
-This is the link of the project : [lien,"https://jactal.github.io/main.html"]
+This is the link of the project : "The link"[https://nath54.github.io/Jactal/main.html]
 
 
 ### Support or Contact
