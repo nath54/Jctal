@@ -9,7 +9,7 @@ var image_y=tey;
 
 var vitz=10.;
 //var zoom = 200; // pour une distance de 1 sur le plan, on a 100 pixel sur l'image
-var iteration_max = 100;
+var iteration_max = 255;
 
 function calc(){
 	ctx.fillStyle="rgb(255,255,255)";
@@ -35,17 +35,20 @@ function calc(){
                 z_r = z_r*z_r - z_i*z_i + c_r
                 z_i = 2.0*z_i*tmp + c_i
                 i = i+1
-                //console.log(z_r+" "+z_i+" "+c_r+" "+z_r*z_r + z_i*z_i);
             }
             if(i == iteration_max){
                 ctx.fillStyle="rgb(0,0,0)";
             }
-            else{
+            else if( i/iteration_max < 0.33){
                 ctx.fillStyle="rgb("+0+", "+0+","+ i/iteration_max*255+")";
-                //console.log(x+" "+y+"  i="+i);
+            }
+            else if( i/iteration_max < 0.66){
+                ctx.fillStyle="rgb("+ i/iteration_max*255+", "+0+","+ i/iteration_max*255+")";
+            }
+            else{
+                ctx.fillStyle="rgb("+ i/iteration_max*255+", "+0+","+0+")";
             }
             ctx.fillRect( x , y ,1 ,1 );
-           // alert(ctx.fillStyle);
         }
     }
 }
