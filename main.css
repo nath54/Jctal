@@ -1,0 +1,23 @@
+body{
+  font-size:40px;
+  background-color:rgb(200,200,200);
+  color:rgb(0,0,200);
+}
+
+canvas{
+  width:98%;
+  border:2px solid black;
+}
+
+button{
+  width:20%;
+  height:10%;
+  font-size:50px;
+  color:rgb(0,100,150);
+  background-color:rgb(30,30,30);
+}
+
+input{
+  width:80%;
+  font-size:30px;
+}
